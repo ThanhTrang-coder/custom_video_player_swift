@@ -13,6 +13,7 @@
 		A63E23C22B635E7C0037CC35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A63E23C02B635E7C0037CC35 /* Main.storyboard */; };
 		A63E23C42B635E7D0037CC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A63E23C32B635E7D0037CC35 /* Assets.xcassets */; };
 		A63E23C72B635E7D0037CC35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A63E23C52B635E7D0037CC35 /* LaunchScreen.storyboard */; };
+		A63E23CF2B6362130037CC35 /* AVPlayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63E23CE2B6362130037CC35 /* AVPlayerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A63E23C32B635E7D0037CC35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A63E23C62B635E7D0037CC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A63E23C82B635E7D0037CC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A63E23CE2B6362130037CC35 /* AVPlayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A63E23C32B635E7D0037CC35 /* Assets.xcassets */,
 				A63E23C52B635E7D0037CC35 /* LaunchScreen.storyboard */,
 				A63E23C82B635E7D0037CC35 /* Info.plist */,
+				A63E23CE2B6362130037CC35 /* AVPlayerExtension.swift */,
 			);
 			path = Custom_video_player;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				A63E23BF2B635E7C0037CC35 /* ViewController.swift in Sources */,
 				A63E23BB2B635E7C0037CC35 /* AppDelegate.swift in Sources */,
 				A63E23BD2B635E7C0037CC35 /* SceneDelegate.swift in Sources */,
+				A63E23CF2B6362130037CC35 /* AVPlayerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +296,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FF7Q5Y459A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Custom_video_player/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -299,6 +304,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,6 +325,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FF7Q5Y459A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Custom_video_player/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -326,6 +333,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

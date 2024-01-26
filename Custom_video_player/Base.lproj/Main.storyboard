@@ -1,24 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Custom_video_player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06x-yE-bj4">
+                                <rect key="frame" x="168.66666666666666" y="622" width="55.666666666666657" height="35"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play"/>
+                                <connections>
+                                    <action selector="playOrPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFc-ZY-zyg"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOC-Ws-Vel">
+                                <rect key="frame" x="10" y="74" width="373" height="523"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RoB-uY-g6A">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="523"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RoB-uY-g6A" firstAttribute="centerY" secondItem="zOC-Ws-Vel" secondAttribute="centerY" id="74b-zT-tPW"/>
+                                    <constraint firstItem="RoB-uY-g6A" firstAttribute="centerX" secondItem="zOC-Ws-Vel" secondAttribute="centerX" id="7zq-PO-gFP"/>
+                                    <constraint firstItem="RoB-uY-g6A" firstAttribute="leading" secondItem="zOC-Ws-Vel" secondAttribute="leading" id="KuA-77-8DL"/>
+                                    <constraint firstAttribute="bottom" secondItem="RoB-uY-g6A" secondAttribute="bottom" id="LmB-g6-ktu"/>
+                                    <constraint firstAttribute="trailing" secondItem="RoB-uY-g6A" secondAttribute="trailing" id="l7f-bI-ADN"/>
+                                    <constraint firstItem="RoB-uY-g6A" firstAttribute="top" secondItem="zOC-Ws-Vel" secondAttribute="top" id="rRN-dp-LZD"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zOC-Ws-Vel" secondAttribute="trailing" constant="10" id="32Z-ol-HoH"/>
+                            <constraint firstItem="zOC-Ws-Vel" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Haw-ko-i0N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="06x-yE-bj4" secondAttribute="bottom" constant="161" id="YCK-Vf-MYd"/>
+                            <constraint firstItem="06x-yE-bj4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e80-tM-M0z"/>
+                            <constraint firstItem="06x-yE-bj4" firstAttribute="top" secondItem="zOC-Ws-Vel" secondAttribute="bottom" constant="25" id="f2E-wH-Niv"/>
+                            <constraint firstItem="zOC-Ws-Vel" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jdx-fq-Ysj"/>
+                            <constraint firstItem="zOC-Ws-Vel" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="taI-rs-7q2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playOrPauseBtn" destination="06x-yE-bj4" id="ee5-ba-D4j"/>
+                        <outlet property="playerView" destination="RoB-uY-g6A" id="HAc-7H-7sC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-63.358778625954194" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
